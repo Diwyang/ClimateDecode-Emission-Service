@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappings xmlns="http://dozer.sourceforge.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://dozer.sourceforge.net
+          http://dozer.sourceforge.net/schema/beanmapping.xsd">
+	<configuration>
+		<custom-converters>
+			<converter type="com.climate.decode.event.emissions.converter.ZonedDateTimeConverter">
+				<class-a>java.time.OffsetDateTime</class-a>
+				<class-b>java.time.OffsetDateTime</class-b>
+			</converter>
+			<!--converter type="com.climate.decode.userservice.converter.AddressTypeConverter">
+				<class-a>com.climate.decode.userservice.enums.AddressType</class-a>
+				<class-b>com.climate.decode.userservice.enums.AddressType</class-b>
+			</converter>
+			<converter type="com.climate.decode.userservice.converter.MobileTypeConverter">
+				<class-a>com.climate.decode.userservice.enums.MobileType</class-a>
+				<class-b>com.climate.decode.userservice.enums.MobileType</class-b>
+			</converter>
+			<converter type="com.climate.decode.userservice.converter.RoleTypeConverter">
+				<class-a>com.climate.decode.userservice.enums.RoleType</class-a>
+				<class-b>com.climate.decode.userservice.enums.RoleType</class-b>
+			</converter-->
+		</custom-converters>
+	</configuration>
+	
+</mappings>
