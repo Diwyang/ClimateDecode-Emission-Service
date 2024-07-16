@@ -1,7 +1,16 @@
 spring:
   application:
     name: event-emission-service
-
+  cloud:
+    consul:
+      host: ${CONSUL_HOST}
+      port: ${CONSUL_PORT}
+      discovery:
+        healthCheckPath: /actuator/health
+        healthCheckInterval: 20s
+        enabled: true
+#        prefer-ip-address: true
+#        ip-address: localhost
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     password: ${DB_PASSWORD}
