@@ -12,7 +12,7 @@ spring:
 #        prefer-ip-address: true
 #        ip-address: localhost
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
     password: ${DB_PASSWORD}
     username: ${DB_USERNAME}
     url: ${CD_DB_URL}
