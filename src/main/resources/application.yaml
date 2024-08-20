@@ -11,8 +11,8 @@ spring:
         enabled: true
         prefer-ip-address: true
         #ip-address: localhost
-    #inetutils:
-    #  ignored-interfaces: eth0
+    inetutils:
+      ignored-interfaces: eth0
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     password: ${DB_PASSWORD}
@@ -25,6 +25,15 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL8Dialect
+
+management:
+  endpoints:
+    health:
+      show-details=always
+    web:
+      exposure:
+        include: health
+        base-path: /actuator
 
 logging:
   level:
