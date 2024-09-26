@@ -1,5 +1,6 @@
 package com.climate.decode.event.emissions.eventpreparation.controller;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.climate.decode.event.emissions.eventpreparation.api.EventPreparationEmissionApi;
@@ -10,6 +11,7 @@ import com.climate.decode.event.emissions.response.ApiResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RequiredArgsConstructor
 @RestController
 @Slf4j
