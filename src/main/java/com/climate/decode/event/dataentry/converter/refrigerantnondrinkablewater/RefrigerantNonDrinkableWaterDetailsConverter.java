@@ -1,0 +1,9 @@
+package com.climate.decode.event.dataentry.converter.refrigerantnondrinkablewater;
+
+import com.climate.decode.event.dataentry.converter.Converter;
+import com.climate.decode.event.dataentry.dto.refrigerantnondrinkablewater.RefrigerantNonDrinkableWaterDetailsDto;
+import com.climate.decode.event.dataentry.entity.refrigerantnondrinkablewater.RefrigerantNonDrinkableWaterDetails;
+
+public interface RefrigerantNonDrinkableWaterDetailsConverter extends Converter<RefrigerantNonDrinkableWaterDetails, RefrigerantNonDrinkableWaterDetailsDto> {
+
+}

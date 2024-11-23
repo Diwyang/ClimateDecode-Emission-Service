@@ -3,7 +3,7 @@ package com.climate.decode.event.emissions.travel.dto;
 import java.math.BigDecimal;
 import java.time.OffsetDateTime;
 
-import com.climate.decode.event.emissions.enums.CalculationType;
+import com.climate.decode.event.enums.CalculationType;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.PropertyNamingStrategies;
