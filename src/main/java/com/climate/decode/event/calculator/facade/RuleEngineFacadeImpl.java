@@ -5,6 +5,7 @@ import java.util.List;
 
 import com.climate.decode.event.calculator.service.AccomdationEmissionCalcService;
 import com.climate.decode.event.calculator.service.MealEmissionCalcService;
+import com.climate.decode.event.calculator.service.VenueEnergyEmissionCalcService;
 import com.climate.decode.event.emissions.response.ApiResponse;
 import com.climate.decode.event.enums.CalculationType;
 
@@ -15,12 +16,13 @@ import lombok.extern.slf4j.Slf4j;
 @RequiredArgsConstructor
 public class RuleEngineFacadeImpl implements RuleEngineFacade {
 
-	private  List<String> list = Arrays.asList("Accomdation", "Meal");
+	private  List<String> list = Arrays.asList("Accomdation", "Meal", "Venue");
 	
 	
 	
 	private final AccomdationEmissionCalcService accService;
 	private final MealEmissionCalcService mealService;
+	private final VenueEnergyEmissionCalcService venueService;
 
 	
 	@Override
@@ -35,6 +37,8 @@ public class RuleEngineFacadeImpl implements RuleEngineFacade {
 				accService.calculateEmission(eventId, calculationType);
 			} else if(source.equalsIgnoreCase("Meal")) {
 				mealService.calculateEmission(eventId, calculationType);
+			} else if(source.equalsIgnoreCase("Venue")) {
+				venueService.calculateEmission(eventId, calculationType);
 			}
 		}
 		

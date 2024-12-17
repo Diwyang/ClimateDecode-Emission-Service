@@ -2,11 +2,13 @@ package com.climate.decode.event.calculator.service;
 
 import java.math.BigDecimal;
 
+import com.climate.decode.event.calculator.repository.EmissionFactorProjection;
 import com.climate.decode.event.dataentry.entity.accommodation.AccommodationDetails;
 import com.climate.decode.event.dataentry.entity.meal.MealDetails;
+import com.climate.decode.event.dataentry.entity.venue.VenueDetails;
 import com.climate.decode.event.emissions.accommodation.dto.AccommodationEmissionDataDto;
-import com.climate.decode.event.calculator.repository.EmissionFactorProjection;
 import com.climate.decode.event.emissions.meal.dto.MealEmissionDataDto;
+import com.climate.decode.event.emissions.venue.dto.VenueEmissionDataDto;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -61,7 +63,16 @@ public class GHGCalculationServiceImpl implements GHGCalculationService {
 		return dto;
 	}
 
-	
+	@Override
+	public VenueEmissionDataDto calculateVenueEmissions(VenueDetails details, EmissionFactorProjection emissionFactor,
+			VenueEmissionDataDto dto) {
+		log.info("GHGCalculationService :: calculateMealEmissions details  " + details);
+		log.info("emissionFactor  " + emissionFactor);
+		log.info("dto  " + dto);
+		
+		
+		return dto;
+	}
 	
 
 }
